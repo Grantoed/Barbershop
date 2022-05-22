@@ -1,0 +1,15 @@
+.about__container {
+  padding-top: 84px;
+  padding-bottom: 84px;
+}
+
+.section-text {
+  line-height: 1.86;
+  color: $secondary-text-color;
+  margin-bottom: 20px;
+
+  &--small {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+}

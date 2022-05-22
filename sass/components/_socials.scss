@@ -1,0 +1,33 @@
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.socials__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.socials__icon {
+  width: 20px;
+  height: 20px;
+
+  fill: $main-title-color;
+  transition: fill $transition;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+}

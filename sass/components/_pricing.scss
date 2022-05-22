@@ -1,0 +1,79 @@
+.pricing {
+  position: relative;
+  background-color: $main-bg-color;
+}
+
+.pricing::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(../images/pricing.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .pricing::after {
+    background-image: url(../images/pricing@2x.jpg);
+  }
+}
+
+@media (min-device-pixel-ratio: 3),
+  (min-resolution: 288dpi),
+  (min-resolution: 3dppx) {
+  .pricing::after {
+    background-image: url(../images/pricing@3x.jpg);
+  }
+}
+
+.pricing__container {
+  padding-top: 84px;
+  padding-bottom: 84px;
+}
+
+.pricing__container p,
+.pricing__container h2,
+.pricing__container button {
+  position: relative;
+  z-index: 1;
+}
+
+.pricing__list {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 2.14;
+  color: $service-text-color;
+
+  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.pricing__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  &::after {
+    content: "";
+    margin-left: 6px;
+    margin-right: 6px;
+    height: 1px;
+    background-color: rgba(157, 164, 189, 0.12);
+    flex-grow: 1;
+  }
+}
+
+.pricing__cost {
+  order: 1;
+}

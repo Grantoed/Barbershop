@@ -1,0 +1,21 @@
+.section-title {
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+
+  color: inherit;
+
+  &--small {
+    font-size: 28px;
+    line-height: 1.18;
+  }
+
+  &--bright {
+    margin-bottom: 44px;
+    color: $secondary-title-color;
+  }
+}

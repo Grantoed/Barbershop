@@ -1,0 +1,160 @@
+.header {
+  position: relative;
+  height: 580px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+
+  background-image: url(../images/hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-color: $main-bg-color;
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .header {
+    background-image: url(../images/hero@2x.jpg);
+  }
+}
+
+@media (min-device-pixel-ratio: 3),
+  (min-resolution: 288dpi),
+  (min-resolution: 3dppx) {
+  .header {
+    background-image: url(../images/hero@3x.jpg);
+  }
+}
+
+.header__container {
+  padding-top: 40px;
+}
+
+.header__mobile {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.logo {
+  display: inline-block;
+}
+
+.header__logo {
+  margin-right: auto;
+}
+
+.logo__icon {
+  width: 69px;
+  height: 55.5px;
+  fill: $secondary-title-color;
+}
+
+.nav__btn-menu {
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  fill: $secondary-title-color;
+
+  cursor: pointer;
+
+  z-index: 2;
+}
+
+.icon-close {
+  display: none;
+}
+
+.nav__btn-menu--is-open .icon-close {
+  display: block;
+  fill: $main-title-color;
+}
+
+.nav__btn-menu--is-open .icon-burger {
+  display: none;
+}
+.nav__menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80vw;
+  height: 100vh;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 118px;
+  background-color: $secondary-title-color;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.39;
+  letter-spacing: 0.1em;
+  z-index: 1;
+  transform: translateX(100%);
+  transition: transform $transition;
+}
+
+.nav__menu--is-open {
+  transform: translateX(0%);
+}
+
+.nav__list {
+  margin-bottom: 64px;
+}
+
+.nav__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.nav__link {
+  color: $main-title-color;
+  transition: color $transition;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.nav__tel {
+  display: inline-block;
+  margin-bottom: 24px;
+
+  color: $main-title-color;
+
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.39;
+  letter-spacing: 0.1em;
+}
+
+// НУЖНО ДОДЕЛАТЬ ПАЛОЧКУ В МЕНЮ МОБИЛКИ
+
+.socials-secondary {
+  // margin-left: 100px;
+}
+
+.socials-secondary__item:first-child::before {
+  content: "";
+  // display: inline-block;
+  width: 60px;
+  height: 1px;
+
+  background-color: inherit;
+}
+
+.socials-secondary__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.socials-secondary__link {
+  color: inherit;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.36;
+}

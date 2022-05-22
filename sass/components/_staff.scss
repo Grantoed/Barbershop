@@ -1,0 +1,31 @@
+.staff {
+  background-color: $secondary-bg-color;
+}
+
+.staff__container {
+  padding-top: 84px;
+  padding-bottom: 84px;
+}
+
+.staff__section-title {
+  margin-bottom: 44px;
+}
+
+.staff__card {
+  margin-bottom: 64px;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.staff__name {
+  margin-bottom: 8px;
+
+  font-size: 18px;
+  line-height: 1.39;
+}
+
+.staff__position {
+  margin-bottom: 30px;
+  line-height: 1.36;
+  color: $accent-color;
+}

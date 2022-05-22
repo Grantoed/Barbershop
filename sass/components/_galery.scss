@@ -1,0 +1,12 @@
+.galery__container {
+  padding-top: 84px;
+  padding-bottom: 84px;
+}
+
+.galery__section-description {
+  margin-bottom: 44px;
+}
+
+.galery__item:not(:last-child) {
+  margin-bottom: 30px;
+}

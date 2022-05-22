@@ -1,0 +1,12 @@
+body {
+  font-family: $main-font;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  color: $main-title-color;
+}
+
+body.modal-open {
+  @media screen and (max-width: 767px) {
+    overflow: hidden;
+  }
+}

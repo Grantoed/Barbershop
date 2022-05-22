@@ -1,0 +1,41 @@
+.reg-button {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  min-width: 160px;
+  height: 40px;
+
+  border: 1px solid $accent-color;
+  border-radius: 25px;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.34;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  transition: color $transition, background-color $transition;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $secondary-title-color;
+  }
+}
+
+.nav-menu__reg-button {
+  margin-bottom: 64px;
+}
+
+.pricing__reg-button {
+  display: block;
+  margin: auto;
+  color: $secondary-title-color;
+}
+
+.reg-form__button {
+  display: block;
+  margin: auto;
+  color: $secondary-title-color;
+}

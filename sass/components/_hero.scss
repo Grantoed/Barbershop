@@ -1,0 +1,32 @@
+.hero {
+  padding-top: 112.5px;
+}
+
+.hero__title {
+  margin-bottom: 20px;
+
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+
+  color: $secondary-title-color;
+}
+
+.hero__text {
+  line-height: 1.63;
+  color: $service-text-color;
+}
+
+.hero__socials-secondary {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.hero__slider {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
