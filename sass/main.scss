@@ -1,21 +1,23 @@
 @import "./base/reset";
 @import "./utils/vars";
-@import "./components/body";
+@import "./base/body";
+
 @import "./components/container";
-@import "./components/page-header";
 @import "./components/button";
 @import "./components/section-description";
-@import "./components/hero";
 @import "./components/section-title";
-@import "./components/about";
 @import "./components/backdrop";
 @import "./components/modal";
 @import "./components/form";
-@import "./components/pricing";
-@import "./components/reviews";
-@import "./components/staff";
 @import "./components/socials";
-@import "./components/galery";
-@import "./components/registration";
-@import "./components/contacts";
-@import "./components/footer";
+
+@import "./layout/page-header";
+@import "./layout/hero";
+@import "./layout/about";
+@import "./layout/pricing";
+@import "./layout/reviews";
+@import "./layout/staff";
+@import "./layout/galery";
+@import "./layout/registration";
+@import "./layout/contacts";
+@import "./layout/footer";

@@ -1,5 +1,10 @@
 .hero {
   padding-top: 112.5px;
+  @media screen and (min-width: 768px) {
+    padding-top: 164px;
+    padding-right: 157px;
+    padding-left: 70px;
+  }
 }
 
 .hero__title {
@@ -26,7 +31,5 @@
 }
 
 .hero__slider {
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
+  display: none;
 }

@@ -21,12 +21,51 @@
   <body>
     <header class="header">
       <div class="container header__container">
-        <div class="header__mobile">
-          <a class="logo header__logo" href="">
-            <svg class="logo__icon">
-              <use href="./images/icons.svg#icon-logo"></use>
-            </svg>
-          </a>
+        <div class="aside-socials">
+          <ul class="aside__list">
+            <li class="aside__item">
+              <a class="aside__link" href="">Instagram</a>
+            </li>
+            <li class="aside__item">
+              <a class="aside__link" href="">Youtube</a>
+            </li>
+          </ul>
+        </div>
+        <div class="header__content">
+          <div class="nav-wrapper">
+            <a class="logo header__logo" href="">
+              <svg class="logo__icon">
+                <use href="./images/icons.svg#icon-logo"></use>
+              </svg>
+            </a>
+
+            <div class="header__menu">
+              <nav class="header__nav">
+                <ul class="header__list">
+                  <li class="header__item">
+                    <a href="#about" class="header__link">О нас</a>
+                  </li>
+                  <li class="header__item">
+                    <a href="#pricing" class="header__link">Услуги и цены</a>
+                  </li>
+                  <li class="header__item">
+                    <a href="#staff" class="header__link">Мастера</a>
+                  </li>
+                  <li class="header__item">
+                    <a href="#contacts" class="header__link">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="reg-block">
+                <a href="tel:+380441111111" class="header__tel"
+                  >+38 044 111 11 11</a
+                >
+                <button type="button" class="reg-button header__reg-button">
+                  Онлайн-запись
+                </button>
+              </div>
+            </div>
+          </div>
           <button
             class="nav__btn-menu"
             aria-expanded="false"
@@ -44,59 +83,56 @@
               ></use>
             </svg>
           </button>
-        </div>
-        <div class="nav__menu" id="nav-menu" data-menu>
-          <nav class="nav">
-            <ul class="nav__list">
-              <li class="nav__item"><a class="nav__link" href="">О нас</a></li>
-              <li class="nav__item">
-                <a class="nav__link" href="">Услуги и цены</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="">Мастера</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="">Контакты</a>
-              </li>
+          <section class="hero">
+            <p class="section-description section-description--bright">
+              A hair salon for men in Kyiv
+            </p>
+            <h1 class="hero__title">BarberShop</h1>
+            <p class="hero__text">
+              Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно
+              и со вкусом.
+            </p>
+            <ul class="slider hero__slider">
+              <li class="slider__back"><button type="button"></button></li>
+              <li class="slider__forward"><button type="button"></button></li>
             </ul>
-          </nav>
-
-          <a class="nav__tel" href="tel:380441111111">+38 044 111 11 11</a>
-          <button class="reg-button nav-menu__reg-button" type="button">
-            Онлайн-запись
-          </button>
-          <ul class="socials-secondary">
-            <li class="socials-secondary__item">
-              <a class="socials-secondary__link" href="">Instagram</a>
-            </li>
-            <li class="socials-secondary__item">
-              <a class="socials-secondary__link" href="">Youtube</a>
-            </li>
-          </ul>
+          </section>
         </div>
+      </div>
+      <div class="nav__menu" id="nav-menu" data-menu>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="#about">О нас</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#pricing">Услуги и цены</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#staff">Мастера</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#contacts">Контакты</a>
+            </li>
+          </ul>
+        </nav>
 
-        <section class="hero">
-          <p class="section-description section-description--bright">
-            A hair salon for men in Kyiv
-          </p>
-          <h1 class="hero__title">BarberShop</h1>
-          <p class="hero__text">
-            Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и
-            со вкусом.
-          </p>
-          <ul class="socials-secondary hero__socials-secondary">
-            <li class="socials-secondary__item"><a href="">Instagram</a></li>
-            <li class="socials-secondary__item"><a href="">Youtube</a></li>
-          </ul>
-          <ul class="slider hero__slider">
-            <li class="slider__back"><button type="button"></button></li>
-            <li class="slider__forward"><button type="button"></button></li>
-          </ul>
-        </section>
+        <a class="nav__tel" href="tel:380441111111">+38 044 111 11 11</a>
+        <button class="reg-button nav-menu__reg-button" type="button">
+          Онлайн-запись
+        </button>
+        <ul class="socials-secondary">
+          <li class="socials-secondary__item">
+            <a class="socials-secondary__link" href="">Instagram</a>
+          </li>
+          <li class="socials-secondary__item">
+            <a class="socials-secondary__link" href="">Youtube</a>
+          </li>
+        </ul>
       </div>
     </header>
     <main>
-      <section class="about">
+      <section class="about" id="about">
         <div class="container about__container">
           <p class="section-description">О нас</p>
           <h2 class="section-title section-title--small">
@@ -172,7 +208,7 @@
         </div>
       </div>
 
-      <section class="pricing">
+      <section class="pricing" id="pricing">
         <div class="container pricing__container">
           <p class="section-description section-description--bright">
             Проведи время в компании лучших мастеров
@@ -253,7 +289,7 @@
           </ul>
         </div>
       </section>
-      <section class="staff">
+      <section class="staff" id="staff">
         <div class="container staff__container">
           <p class="section-description">Для настоящих ценителей атмосферы</p>
           <h2 class="section-title staff__section-title">Наши мастера</h2>
@@ -502,7 +538,7 @@
           </form>
         </div>
       </section>
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <div class="container contacts__container">
           <h2
             class="section-title section-title--bright contacts__section-title"

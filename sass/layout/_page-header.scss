@@ -1,0 +1,352 @@
+.header {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 40px;
+    padding-bottom: 183px;
+    background-image: url(../images/hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-color: $main-bg-color;
+  }
+
+  @media screen and (max-width: 767px) {
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      & {
+        background-image: url(../images/hero@2x.jpg);
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    @media (min-device-pixel-ratio: 3),
+      (min-resolution: 288dpi),
+      (min-resolution: 3dppx) {
+      & {
+        background-image: url(../images/hero@3x.jpg);
+      }
+    }
+  }
+}
+
+.header__container {
+  position: relative;
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.header__content {
+  @media screen and (min-width: 768px) {
+    padding-top: 40px;
+    padding-bottom: 234px;
+    background-image: url(../images/hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-color: $main-bg-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      & {
+        background-image: url(../images/hero@2x.jpg);
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    @media (min-device-pixel-ratio: 3),
+      (min-resolution: 288dpi),
+      (min-resolution: 3dppx) {
+      & {
+        background-image: url(../images/hero@3x.jpg);
+      }
+    }
+  }
+}
+
+.aside-socials {
+  display: flex;
+  align-items: flex-end;
+  width: 85px;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.aside__list {
+  display: flex;
+  align-items: center;
+  transform: rotate(-90deg);
+  transform-origin: 0 0;
+  &::before {
+    content: "";
+    width: 60px;
+    height: 1px;
+    margin-right: 40px;
+    margin-left: 40px;
+    background-color: $main-title-color;
+  }
+}
+
+.aside__item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.aside__link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: $main-title-color;
+  transition: color $transition;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  padding-left: 23px;
+}
+
+.logo {
+  display: inline-block;
+}
+
+.header__logo {
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    top: 32px;
+    left: 10px;
+  }
+}
+
+.logo__icon {
+  width: 69px;
+  height: 55.5px;
+  fill: $secondary-title-color;
+  @media screen and (min-width: 768px) {
+    fill: $main-title-color;
+  }
+}
+
+.nav__btn-menu {
+  position: absolute;
+  top: 10px;
+  right: 31px;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  fill: $secondary-title-color;
+
+  cursor: pointer;
+
+  z-index: 2;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.icon-close {
+  display: none;
+  .nav__btn-menu--is-open & {
+    display: block;
+    fill: $main-title-color;
+  }
+}
+
+.nav__btn-menu--is-open .icon-burger {
+  display: none;
+}
+
+.header__menu {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.header__nav {
+  margin-right: auto;
+}
+
+.header__list {
+  display: flex;
+}
+
+.header__item:not(:last-child) {
+  margin-right: 24px;
+}
+
+.header__link {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+  color: $secondary-title-color;
+  transition: color $transition;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.reg-block {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.header__tel {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $secondary-title-color;
+  transition: color $transition;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.nav__menu {
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80vw;
+    height: 100vh;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 118px;
+    background-color: $secondary-title-color;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.39;
+    letter-spacing: 0.1em;
+    z-index: 1;
+    transform: translateX(100%);
+    transition: transform $transition;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.nav__menu--is-open {
+  transform: translateX(0%);
+}
+
+.nav__list {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 64px;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.nav__item:not(:last-child) {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 24px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-right: 24px;
+  }
+}
+
+.nav__link {
+  color: $main-title-color;
+  transition: color $transition;
+
+  @media screen and (min-width: 768px) {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    color: $secondary-title-color;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.nav__tel {
+  display: inline-block;
+
+  color: $main-title-color;
+
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.39;
+  letter-spacing: 0.1em;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 24px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+    line-height: 1.33;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $secondary-title-color;
+  }
+}
+
+// НУЖНО ДОДЕЛАТЬ ПАЛОЧКУ В МЕНЮ МОБИЛКИ
+
+.socials-secondary {
+  // margin-left: 100px;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.socials-secondary__item:first-child::before {
+  content: "";
+  // display: inline-block;
+  width: 60px;
+  height: 1px;
+
+  background-color: inherit;
+}
+
+.socials-secondary__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.socials-secondary__link {
+  color: inherit;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.36;
+}
