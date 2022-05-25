@@ -1,18 +1,34 @@
 .staff {
+  padding-top: 84px;
+  padding-bottom: 84px;
   background-color: $secondary-bg-color;
+  @media screen and (min-width: 768px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }
 
 .staff__container {
-  padding-top: 84px;
-  padding-bottom: 84px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .staff__section-title {
   margin-bottom: 44px;
 }
 
-.staff__card {
+.staff__list {
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
+}
+
+.staff__item:not(:last-child) {
   margin-bottom: 64px;
+}
+
+.staff__card {
   padding-top: 30px;
   text-align: center;
 }

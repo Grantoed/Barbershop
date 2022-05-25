@@ -17,11 +17,6 @@
 
   border-radius: 50%;
   background-color: #fff;
-}
-
-.socials__icon {
-  width: 20px;
-  height: 20px;
 
   fill: $main-title-color;
   transition: fill $transition;
@@ -30,4 +25,9 @@
   &:focus {
     fill: $accent-color;
   }
+}
+
+.socials__icon {
+  width: 20px;
+  height: 20px;
 }

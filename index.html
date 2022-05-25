@@ -134,24 +134,54 @@
     <main>
       <section class="about" id="about">
         <div class="container about__container">
-          <p class="section-description">О нас</p>
-          <h2 class="section-title section-title--small">
-            Лучший Барбершоп твоего города
-          </h2>
-          <p class="section-text">
-            Если ты хочешь добавить в свой образ больше уверенности – тебе точно
-            к нам.
-          </p>
-          <p class="section-text section-text--small">
-            Мы команда, которая никогда не останавливается на достигнутом и
-            жаждет перемен. И когда ты попадешь в руки нашего мастера, то уже
-            никогда не сможешь быть прежним. Мы команда, которая всегда с
-            клиентами "на одной волне". Поэтому, мы всегда готовы
-            усовершенствовать каждого, кто к нам приходит!
-          </p>
-          <button class="reg-button" type="button" data-modal-open>
-            Онлайн-запись
-          </button>
+          <div class="about__galery">
+            <ul class="about__list">
+              <li class="about__item">
+                <img
+                  class="about__img"
+                  srcset="
+                    ./images/about-1.jpg    1x,
+                    ./images/about-1@2x.jpg 2x,
+                    ./images/about-1@3x.jpg 3x
+                  "
+                  src="./images/about-1.jpg"
+                  alt="Барбер бреет бороду"
+                />
+              </li>
+              <li class="about__item">
+                <img
+                  class="about__img"
+                  srcset="
+                    ./images/about-2.jpg    1x,
+                    ./images/about-2@2x.jpg 2x,
+                    ./images/about-2@3x.jpg 3x
+                  "
+                  src="./images/about-2.jpg"
+                  alt="Барбер бреет бороду"
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="about__content">
+            <p class="section-description">О нас</p>
+            <h2 class="section-title section-title--small">
+              Лучший Барбершоп твоего города
+            </h2>
+            <p class="section-text">
+              Если ты хочешь добавить в свой образ больше уверенности – тебе
+              точно к нам.
+            </p>
+            <p class="section-text section-text--small">
+              Мы команда, которая никогда не останавливается на достигнутом и
+              жаждет перемен. И когда ты попадешь в руки нашего мастера, то уже
+              никогда не сможешь быть прежним. Мы команда, которая всегда с
+              клиентами "на одной волне". Поэтому, мы всегда готовы
+              усовершенствовать каждого, кто к нам приходит!
+            </p>
+            <button class="reg-button" type="button" data-modal-open>
+              Онлайн-запись
+            </button>
+          </div>
         </div>
       </section>
 
@@ -295,16 +325,30 @@
           <h2 class="section-title staff__section-title">Наши мастера</h2>
           <ul class="staff__list">
             <li class="staff__item">
-              <img
-                srcset="
-                  ./images/john-smith.jpg    1x,
-                  ./images/john-smith@2x.jpg 2x,
-                  ./images/john-smith@3x.jpg 3x
-                "
-                class="staff__image"
-                src="./images/john-smith.jpg"
-                alt="John Smith"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/john-smith-tab.jpg    1x,
+                    ./images/john-smith-tab@2x.jpg 2x,
+                    ./images/john-smith-tab@3x.jpg 3x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/john-smith.jpg    1x,
+                    ./images/john-smith@2x.jpg 2x,
+                    ./images/john-smith@3x.jpg 3x
+                  "
+                  media="(max-width:767px)"
+                />
+                <img
+                  class="staff__image"
+                  src="./images/john-smith.jpg"
+                  alt="John Smith"
+                />
+              </picture>
+
               <div class="staff__card">
                 <p class="staff__name">John Smith</p>
                 <p class="staff__position">Extreme Barber</p>
@@ -341,16 +385,29 @@
               </div>
             </li>
             <li class="staff__item">
-              <img
-                srcset="
-                  ./images/michele-doe.jpg    1x,
-                  ./images/michele-doe@2x.jpg 2x,
-                  ./images/michele-doe@3x.jpg 3x
-                "
-                class="staff__image"
-                src="./images/michele-doe.jpg"
-                alt="Michele Doe"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/michele-doe-tab.jpg    1x,
+                    ./images/michele-doe-tab@2x.jpg 2x,
+                    ./images/michele-doe-tab@3x.jpg 3x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/michele-doe.jpg    1x,
+                    ./images/michele-doe@2x.jpg 2x,
+                    ./images/michele-doe@3x.jpg 3x
+                  "
+                  media="(max-width:767px)"
+                />
+                <img
+                  class="staff__image"
+                  src="./images/michele-doe.jpg"
+                  alt="Michele Doe"
+                />
+              </picture>
               <div class="staff__card">
                 <p class="staff__name">Michele Doe</p>
                 <p class="staff__position">Extreme Barber</p>
@@ -387,16 +444,29 @@
               </div>
             </li>
             <li class="staff__item">
-              <img
-                srcset="
-                  ./images/alan-black.jpg    1x,
-                  ./images/alan-black@2x.jpg 2x,
-                  ./images/alan-black@3x.jpg 3x
-                "
-                class="staff__image"
-                src="./images/alan-black.jpg"
-                alt="Alan Black"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/alan-black-tab.jpg    1x,
+                    ./images/alan-black-tab@2x.jpg 2x,
+                    ./images/alan-black-tab@3x.jpg 3x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/alan-black.jpg    1x,
+                    ./images/alan-black@2x.jpg 2x,
+                    ./images/alan-black@3x.jpg 3x
+                  "
+                  media="(max-width:767px)"
+                />
+                <img
+                  class="staff__image"
+                  src="./images/alan-black.jpg"
+                  alt="Alan Black"
+                />
+              </picture>
               <div class="staff__card">
                 <p class="staff__name">Alan Black</p>
                 <p class="staff__position">Extreme Barber</p>
