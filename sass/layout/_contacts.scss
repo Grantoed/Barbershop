@@ -16,7 +16,12 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-image: url(../images/contacts.jpg);
+  background-image: linear-gradient(
+      to right,
+      rgba(157, 164, 189, 0.2),
+      rgba(157, 164, 189, 0.2)
+    ),
+    url(../images/contacts.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -27,7 +32,12 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .contacts::after {
-    background-image: url(../images/contacts@2x.jpg);
+    background-image: linear-gradient(
+        to right,
+        rgba(157, 164, 189, 0.2),
+        rgba(157, 164, 189, 0.2)
+      ),
+      url(../images/contacts@2x.jpg);
   }
 }
 
@@ -35,7 +45,12 @@
   (min-resolution: 288dpi),
   (min-resolution: 3dppx) {
   .contacts::after {
-    background-image: url(../images/contacts@3x.jpg);
+    background-image: linear-gradient(
+        to right,
+        rgba(157, 164, 189, 0.2),
+        rgba(157, 164, 189, 0.2)
+      ),
+      url(../images/contacts@3x.jpg);
   }
 }
 

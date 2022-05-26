@@ -18,6 +18,14 @@
     margin-right: auto;
   }
 
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 480px;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
   &__text {
     font-weight: 700;
     font-size: 20px;
