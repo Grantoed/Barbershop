@@ -138,6 +138,7 @@
             <ul class="about__list">
               <li class="about__item">
                 <img
+                  loading="lazy"
                   class="about__img"
                   srcset="
                     ./images/about-1.jpg    1x,
@@ -150,6 +151,7 @@
               </li>
               <li class="about__item">
                 <img
+                  loading="lazy"
                   class="about__img"
                   srcset="
                     ./images/about-2.jpg    1x,
@@ -512,52 +514,104 @@
           </p>
           <ul class="galery__list">
             <li class="galery__item">
-              <img
-                srcset="
-                  ./images/gal-1.jpg    1x,
-                  ./images/gal-1@2x.jpg 2x,
-                  ./images/gal-1@3x.jpg 3x
-                "
-                src="./images/gal-1.jpg"
-                alt="Барбер стрижет клиента"
-                class="galery__image"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/gal-1-tab.jpg    1x,
+                    ./images/gal-1-tab@2x.jpg 2x,
+                    ./images/gal-1-tab@3x.jpg 3x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/gal-1.jpg    1x,
+                    ./images/gal-1@2x.jpg 2x,
+                    ./images/gal-1@3x.jpg 3x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/gal-1.jpg"
+                  alt="Барбер стрижет клиента"
+                  class="galery__image"
+                />
+              </picture>
             </li>
             <li class="galery__item">
-              <img
-                srcset="
-                  ./images/gal-2.jpg    1x,
-                  ./images/gal-2@2x.jpg 2x,
-                  ./images/gal-2@3x.jpg 3x
-                "
-                src="./images/gal-2.jpg"
-                alt="Барбер стрижет клиента"
-                class="galery__image"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/gal-2-tab.jpg    1x,
+                    ./images/gal-2-tab@2x.jpg 2x,
+                    ./images/gal-2-tab@3x.jpg 3x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/gal-2.jpg    1x,
+                    ./images/gal-2@2x.jpg 2x,
+                    ./images/gal-2@3x.jpg 3x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/gal-2.jpg"
+                  alt="Барбер стрижет клиента"
+                  class="galery__image"
+                />
+              </picture>
             </li>
             <li class="galery__item">
-              <img
-                srcset="
-                  ./images/gal-3.jpg    1x,
-                  ./images/gal-3@2x.jpg 2x,
-                  ./images/gal-3@3x.jpg 3x
-                "
-                src="./images/gal-3.jpg"
-                alt="Барбер стрижет клиента"
-                class="galery__image"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/gal-3-tab.jpg    1x,
+                    ./images/gal-3-tab@2x.jpg 2x,
+                    ./images/gal-3-tab@3x.jpg 3x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/gal-3.jpg    1x,
+                    ./images/gal-3@2x.jpg 2x,
+                    ./images/gal-3@3x.jpg 3x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/gal-3.jpg"
+                  alt="Барбер стрижет клиента"
+                  class="galery__image"
+                />
+              </picture>
             </li>
             <li class="galery__item">
-              <img
-                srcset="
-                  ./images/gal-4.jpg    1x,
-                  ./images/gal-4@2x.jpg 2x,
-                  ./images/gal-4@3x.jpg 3x
-                "
-                src="./images/gal-4.jpg"
-                alt="Барбер стрижет клиента"
-                class="galery__image"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/gal-4-tab.jpg    1x,
+                    ./images/gal-4-tab@2x.jpg 2x,
+                    ./images/gal-4-tab@3x.jpg 3x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/gal-4.jpg    1x,
+                    ./images/gal-4@2x.jpg 2x,
+                    ./images/gal-4@3x.jpg 3x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/gal-4.jpg"
+                  alt="Барбер стрижет клиента"
+                  class="galery__image"
+                />
+              </picture>
             </li>
           </ul>
         </div>
@@ -570,29 +624,33 @@
             Онлайн-запись
           </h2>
           <form class="reg-form">
-            <div class="reg-form__field">
-              <input
-                class="reg-form__input reg-form__name"
-                type="text"
-                name="name"
-                id="name"
-                placeholder=" "
-                required
-              />
-              <label class="reg-form__label" for="name">Имя&#x0002A;</label>
+            <div class="reg-form__wrapper">
+              <div class="reg-form__field">
+                <input
+                  class="reg-form__input reg-form__name"
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder=" "
+                  required
+                />
+                <label class="reg-form__label" for="name">Имя&#x0002A;</label>
+              </div>
+              <div class="reg-form__field">
+                <input
+                  class="reg-form__input reg-form__tel"
+                  type="tel"
+                  name="tel"
+                  id="tel"
+                  placeholder=" "
+                  required
+                />
+                <label class="reg-form__label" for="tel"
+                  >Телефон&#x0002A;</label
+                >
+              </div>
             </div>
-            <div class="reg-form__field">
-              <input
-                class="reg-form__input reg-form__tel"
-                type="tel"
-                name="tel"
-                id="tel"
-                placeholder=" "
-                required
-              />
-              <label class="reg-form__label" for="tel">Телефон&#x0002A;</label>
-            </div>
-            <div class="reg-form__field">
+            <div class="reg-form__field reg-form__comment">
               <input
                 class="reg-form__input"
                 type="text"
@@ -615,43 +673,47 @@
           >
             Контакты
           </h2>
-          <address>
-            <ul class="contacts__list">
-              <li class="contacts__item">
-                <a class="contacts__link contacts__map" href=""
-                  ><svg class="contacts__icon">
-                    <use href="./images/icons.svg#icon-map-pin"></use>
-                  </svg>
-                  ул. Васильковая, 7А Киев, 08132</a
-                >
-              </li>
-              <li class="contacts__item">
-                <a
-                  class="contacts__link contacts__tel"
-                  href="tel:+380441111111"
-                >
-                  <svg class="contacts__icon">
-                    <use href="./images/icons.svg#icon-phone"></use>
-                  </svg>
-                  +38 044 111 11 11</a
-                >
-              </li>
-              <li class="contacts__item">
-                <a
-                  class="contacts__link contacts__mail"
-                  href="mailto:barbershop@email.com"
-                  ><svg class="contacts__icon">
-                    <use href="./images/icons.svg#icon-mail"></use>
-                  </svg>
-                  barbershop@email.com</a
-                >
-              </li>
-            </ul>
-          </address>
-          <p class="section-description section-description--bright">
-            время работы
-          </p>
-          <p class="contacts__text">Ежедневно с 9:00 до 22:00</p>
+          <div class="contacts__wrapper">
+            <address class="contacts__address">
+              <ul class="contacts__list">
+                <li class="contacts__item">
+                  <a class="contacts__link contacts__map" href=""
+                    ><svg class="contacts__icon">
+                      <use href="./images/icons.svg#icon-map-pin"></use>
+                    </svg>
+                    ул. Васильковая, 7А Киев, 08132</a
+                  >
+                </li>
+                <li class="contacts__item">
+                  <a
+                    class="contacts__link contacts__tel"
+                    href="tel:+380441111111"
+                  >
+                    <svg class="contacts__icon">
+                      <use href="./images/icons.svg#icon-phone"></use>
+                    </svg>
+                    +38 044 111 11 11</a
+                  >
+                </li>
+                <li class="contacts__item">
+                  <a
+                    class="contacts__link contacts__mail"
+                    href="mailto:barbershop@email.com"
+                    ><svg class="contacts__icon">
+                      <use href="./images/icons.svg#icon-mail"></use>
+                    </svg>
+                    barbershop@email.com</a
+                  >
+                </li>
+              </ul>
+            </address>
+            <div class="contacts__time">
+              <p class="section-description section-description--bright">
+                время работы
+              </p>
+              <p class="contacts__text">Ежедневно с 9:00 до 22:00</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>

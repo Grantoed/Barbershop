@@ -1,14 +1,17 @@
 .registration {
-  background-color: $main-bg-color;
-}
-
-.registration__container {
   padding-top: 84px;
   padding-bottom: 84px;
+  background-color: $main-bg-color;
+  @media screen and (min-width: 768px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }
 
 .registration__section-title {
-  text-align: center;
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 
 .reg-form {
@@ -21,14 +24,31 @@
   color: $secondary-title-color;
 }
 
+.reg-form__wrapper {
+  margin-bottom: 44px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+
 .reg-form__field {
   display: flex;
   flex-direction: column-reverse;
-  margin-bottom: 20px;
-
-  &:last-of-type {
-    margin-bottom: 44px;
+  flex-grow: 1;
+  @media screen and (max-width: 767px) {
+    &:first-of-type {
+      margin-bottom: 20px;
+    }
   }
+  @media screen and (min-width: 768px) {
+    &:first-of-type {
+      margin-right: 30px;
+    }
+  }
+}
+
+.reg-form__comment {
+  margin-bottom: 44px;
 }
 
 .reg-form__label {

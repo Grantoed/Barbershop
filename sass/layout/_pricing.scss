@@ -64,6 +64,9 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
 
   &::after {
     content: "";
