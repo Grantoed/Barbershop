@@ -45,7 +45,6 @@
 .header__content {
   @media screen and (min-width: 768px) {
     padding-top: 40px;
-    padding-bottom: 234px;
     background-image: url(../images/hero.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -72,6 +71,36 @@
       }
     }
   }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 48px;
+    background-image: url(../images/hero-desk.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-color: $main-bg-color;
+    flex-grow: 1;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      & {
+        background-image: url(../images/hero-desk@2x.jpg);
+      }
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    @media (min-device-pixel-ratio: 3),
+      (min-resolution: 288dpi),
+      (min-resolution: 3dppx) {
+      & {
+        background-image: url(../images/hero-desk@3x.jpg);
+      }
+    }
+  }
 }
 
 .aside-socials {
@@ -80,6 +109,9 @@
   width: 85px;
   @media screen and (max-width: 767px) {
     display: none;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 93px;
   }
 }
 
@@ -95,6 +127,9 @@
     margin-right: 40px;
     margin-left: 40px;
     background-color: $main-title-color;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 22px;
   }
 }
 
@@ -119,6 +154,9 @@
   display: flex;
   align-items: center;
   padding-left: 23px;
+  @media screen and (min-width: 1200px) {
+    padding-left: 40px;
+  }
 }
 
 .logo {
@@ -130,6 +168,11 @@
     position: absolute;
     top: 32px;
     left: 10px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    top: 40px;
+    left: 16px;
   }
 }
 
@@ -195,12 +238,15 @@
 
 .header__item:not(:last-child) {
   margin-right: 24px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 40px;
+  }
 }
 
 .header__link {
   display: block;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 13px;
+  padding-bottom: 13px;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
@@ -215,8 +261,11 @@
 
 .reg-block {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: center;
+  @media screen and (min-width: 1200px) {
+    flex-direction: row-reverse;
+  }
 }
 
 .header__tel {
@@ -230,6 +279,9 @@
   &:hover,
   &:focus {
     color: $accent-color;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 40px;
   }
 }
 

@@ -57,12 +57,12 @@
                 </ul>
               </nav>
               <div class="reg-block">
-                <a href="tel:+380441111111" class="header__tel"
-                  >+38 044 111 11 11</a
-                >
                 <button type="button" class="reg-button header__reg-button">
                   Онлайн-запись
                 </button>
+                <a href="tel:+380441111111" class="header__tel"
+                  >+38 044 111 11 11</a
+                >
               </div>
             </div>
           </div>
@@ -137,30 +137,56 @@
           <div class="about__galery">
             <ul class="about__list">
               <li class="about__item">
-                <img
-                  loading="lazy"
-                  class="about__img"
-                  srcset="
-                    ./images/about-1.jpg    1x,
-                    ./images/about-1@2x.jpg 2x,
-                    ./images/about-1@3x.jpg 3x
-                  "
-                  src="./images/about-1.jpg"
-                  alt="Барбер бреет бороду"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/about-1-desk.jpg    1x,
+                      ./images/about-1-desk@2x.jpg 2x,
+                      ./images/about-1-desk@3x.jpg 3x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/about-1.jpg    1x,
+                      ./images/about-1@2x.jpg 2x,
+                      ./images/about-1@3x.jpg 3x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    loading="lazy"
+                    class="about__img"
+                    src="./images/about-1.jpg"
+                    alt="Барбер бреет бороду"
+                  />
+                </picture>
               </li>
               <li class="about__item">
-                <img
-                  loading="lazy"
-                  class="about__img"
-                  srcset="
-                    ./images/about-2.jpg    1x,
-                    ./images/about-2@2x.jpg 2x,
-                    ./images/about-2@3x.jpg 3x
-                  "
-                  src="./images/about-2.jpg"
-                  alt="Барбер бреет бороду"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/about-2-desk.jpg    1x,
+                      ./images/about-2-desk@2x.jpg 2x,
+                      ./images/about-2-desk@3x.jpg 3x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/about-2.jpg    1x,
+                      ./images/about-2@2x.jpg 2x,
+                      ./images/about-2@3x.jpg 3x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    loading="lazy"
+                    class="about__img"
+                    src="./images/about-2.jpg"
+                    alt="Барбер бреет бороду"
+                  />
+                </picture>
               </li>
             </ul>
           </div>
@@ -246,40 +272,44 @@
             Проведи время в компании лучших мастеров
           </p>
           <h2 class="section-title section-title--bright">Услуги и цены</h2>
-          <ul class="pricing__list">
-            <li class="pricing__item">
-              <p class="pricing__service">Мужская стрижка</p>
-              <p class="pricing__cost">от 300 грн.</p>
-            </li>
-            <li class="pricing__item">
-              <p class="pricing__service">Стрижка бороды</p>
-              <p class="pricing__cost">от 200 грн.</p>
-            </li>
-            <li class="pricing__item">
-              <p class="pricing__service">Стрижка усов</p>
-              <p class="pricing__cost">от 200 грн.</p>
-            </li>
-            <li class="pricing__item">
-              <p class="pricing__service">Бритье опасной бритвой</p>
-              <p class="pricing__cost">от 200 грн.</p>
-            </li>
-            <li class="pricing__item">
-              <p class="pricing__service">Стрижка у стажера</p>
-              <p class="pricing__cost">от 50 грн.</p>
-            </li>
-            <li class="pricing__item">
-              <p class="pricing__service">Стрижка под насадку</p>
-              <p class="pricing__cost">от 200 грн.</p>
-            </li>
-            <li class="pricing__item">
-              <p class="pricing__service">Детская стрижка</p>
-              <p class="pricing__cost">от 300 грн.</p>
-            </li>
-            <li class="pricing__item">
-              <p class="pricing__service">Камуфлирование седины</p>
-              <p class="pricing__cost">от 200 грн.</p>
-            </li>
-          </ul>
+          <div class="pricing__wrapper">
+            <ul class="pricing__list pricing__list--light">
+              <li class="pricing__item">
+                <p class="pricing__service">Мужская стрижка</p>
+                <p class="pricing__cost">от 300 грн.</p>
+              </li>
+              <li class="pricing__item">
+                <p class="pricing__service">Стрижка бороды</p>
+                <p class="pricing__cost">от 200 грн.</p>
+              </li>
+              <li class="pricing__item">
+                <p class="pricing__service">Стрижка усов</p>
+                <p class="pricing__cost">от 200 грн.</p>
+              </li>
+              <li class="pricing__item">
+                <p class="pricing__service">Бритье опасной бритвой</p>
+                <p class="pricing__cost">от 200 грн.</p>
+              </li>
+            </ul>
+            <ul class="pricing__list pricing__list--dark">
+              <li class="pricing__item">
+                <p class="pricing__service">Стрижка у стажера</p>
+                <p class="pricing__cost">от 50 грн.</p>
+              </li>
+              <li class="pricing__item">
+                <p class="pricing__service">Стрижка под насадку</p>
+                <p class="pricing__cost">от 200 грн.</p>
+              </li>
+              <li class="pricing__item">
+                <p class="pricing__service">Детская стрижка</p>
+                <p class="pricing__cost">от 300 грн.</p>
+              </li>
+              <li class="pricing__item">
+                <p class="pricing__service">Камуфлирование седины</p>
+                <p class="pricing__cost">от 200 грн.</p>
+              </li>
+            </ul>
+          </div>
           <button class="reg-button pricing__reg-button" type="button">
             Онлайн-запись
           </button>

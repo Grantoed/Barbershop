@@ -4,6 +4,14 @@
     padding-top: 164px;
     padding-right: 157px;
     padding-left: 70px;
+    padding-bottom: 234px;
+
+    @media screen and (min-width: 1200px) {
+      padding-top: 208px;
+      padding-right: 452px;
+      padding-bottom: 206px;
+      padding-left: 96px;
+    }
   }
 }
 
@@ -17,11 +25,19 @@
   letter-spacing: 0.05em;
 
   color: $secondary-title-color;
+  @media screen and (min-width: 1200px) {
+    font-size: 72px;
+  }
 }
 
 .hero__text {
   line-height: 1.63;
   color: $service-text-color;
+  @media screen and (min-width: 1200px) {
+    max-width: 400px;
+    font-size: 18px;
+    line-height: 1.67;
+  }
 }
 
 .hero__socials-secondary {
