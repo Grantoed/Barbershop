@@ -25,21 +25,33 @@
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 0.2;
-}
 
-@media (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  .pricing::after {
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
     background-image: url(../images/pricing@2x.jpg);
   }
-}
 
-@media (min-device-pixel-ratio: 3),
-  (min-resolution: 288dpi),
-  (min-resolution: 3dppx) {
-  .pricing::after {
+  @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
     background-image: url(../images/pricing@3x.jpg);
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: url(../images/pricing-desk.jpg);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/pricing-desk@2x.jpg);
+  }
+
+  @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    background-image: url(../images/pricing-desk@3x.jpg);
   }
 }
 

@@ -6,6 +6,16 @@
     padding-top: 100px;
     padding-bottom: 100px;
   }
+  @media screen and (min-width: 1200px) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.reg-contacts-wrapper {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
 
 .registration__section-title {

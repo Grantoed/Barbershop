@@ -317,12 +317,14 @@
       </section>
       <section class="reviews">
         <div class="container reviews__container">
-          <p class="section-description">Старая традиционная школа</p>
-          <h2 class="section-title">Почему приходят именно к нам?</h2>
-          <p class="reviews__text">
-            О нас говорят только хорошее. Но лучше 1 раз увидеть и
-            прочувствовать, чем 10 раз прочитать.
-          </p>
+          <div class="reviews__content">
+            <p class="section-description">Старая традиционная школа</p>
+            <h2 class="section-title">Почему приходят именно к нам?</h2>
+            <p class="reviews__text">
+              О нас говорят только хорошее. Но лучше 1 раз увидеть и
+              прочувствовать, чем 10 раз прочитать.
+            </p>
+          </div>
           <ul class="reviews__list">
             <li class="reviews__item">
               <p class="reviews__number">
@@ -358,6 +360,14 @@
           <ul class="staff__list">
             <li class="staff__item">
               <picture>
+                <source
+                  srcset="
+                    ./images/john-smith-desk.jpg    1x,
+                    ./images/john-smith-desk@2x.jpg 2x,
+                    ./images/john-smith-desk@3x.jpg 3x
+                  "
+                  media="(min-width:1200px)"
+                />
                 <source
                   srcset="
                     ./images/john-smith-tab.jpg    1x,
@@ -420,6 +430,14 @@
               <picture>
                 <source
                   srcset="
+                    ./images/michele-doe-desk.jpg    1x,
+                    ./images/michele-doe-desk@2x.jpg 2x,
+                    ./images/michele-doe-desk@3x.jpg 3x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
                     ./images/michele-doe-tab.jpg    1x,
                     ./images/michele-doe-tab@2x.jpg 2x,
                     ./images/michele-doe-tab@3x.jpg 3x
@@ -477,6 +495,14 @@
             </li>
             <li class="staff__item">
               <picture>
+                <source
+                  srcset="
+                    ./images/alan-black-desk.jpg    1x,
+                    ./images/alan-black-desk@2x.jpg 2x,
+                    ./images/alan-black-desk@3x.jpg 3x
+                  "
+                  media="(min-width:1200px)"
+                />
                 <source
                   srcset="
                     ./images/alan-black-tab.jpg    1x,
@@ -548,6 +574,14 @@
               <picture>
                 <source
                   srcset="
+                    ./images/gal-1-desk.jpg    1x,
+                    ./images/gal-1-desk@2x.jpg 2x,
+                    ./images/gal-1-desk@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
                     ./images/gal-1-tab.jpg    1x,
                     ./images/gal-1-tab@2x.jpg 2x,
                     ./images/gal-1-tab@3x.jpg 3x
@@ -571,6 +605,14 @@
             </li>
             <li class="galery__item">
               <picture>
+                <source
+                  srcset="
+                    ./images/gal-2-desk.jpg    1x,
+                    ./images/gal-2-desk@2x.jpg 2x,
+                    ./images/gal-2-desk@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                />
                 <source
                   srcset="
                     ./images/gal-2-tab.jpg    1x,
@@ -598,6 +640,14 @@
               <picture>
                 <source
                   srcset="
+                    ./images/gal-3-desk.jpg    1x,
+                    ./images/gal-3-desk@2x.jpg 2x,
+                    ./images/gal-3-desk@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
                     ./images/gal-3-tab.jpg    1x,
                     ./images/gal-3-tab@2x.jpg 2x,
                     ./images/gal-3-tab@3x.jpg 3x
@@ -621,6 +671,14 @@
             </li>
             <li class="galery__item">
               <picture>
+                <source
+                  srcset="
+                    ./images/gal-4-desk.jpg    1x,
+                    ./images/gal-4-desk@2x.jpg 2x,
+                    ./images/gal-4-desk@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                />
                 <source
                   srcset="
                     ./images/gal-4-tab.jpg    1x,
@@ -647,108 +705,110 @@
           </ul>
         </div>
       </section>
-      <section class="registration">
-        <div class="container registration__container">
-          <h2
-            class="section-title section-title--bright registration__section-title"
-          >
-            Онлайн-запись
-          </h2>
-          <form class="reg-form">
-            <div class="reg-form__wrapper">
-              <div class="reg-form__field">
+      <div class="reg-contacts-wrapper">
+        <section class="registration">
+          <div class="container registration__container">
+            <h2
+              class="section-title section-title--bright registration__section-title"
+            >
+              Онлайн-запись
+            </h2>
+            <form class="reg-form">
+              <div class="reg-form__wrapper">
+                <div class="reg-form__field">
+                  <input
+                    class="reg-form__input reg-form__name"
+                    type="text"
+                    name="name"
+                    id="reg-name"
+                    placeholder=" "
+                    required
+                  />
+                  <label class="reg-form__label" for="reg-name"
+                    >Имя&#x0002A;</label
+                  >
+                </div>
+                <div class="reg-form__field">
+                  <input
+                    class="reg-form__input reg-form__tel"
+                    type="tel"
+                    name="tel"
+                    id="reg-tel"
+                    placeholder=" "
+                    required
+                  />
+                  <label class="reg-form__label" for="reg-tel"
+                    >Телефон&#x0002A;</label
+                  >
+                </div>
+              </div>
+              <div class="reg-form__field reg-form__comment">
                 <input
-                  class="reg-form__input reg-form__name"
+                  class="reg-form__input"
                   type="text"
-                  name="name"
-                  id="reg-name"
+                  name="comment"
+                  id="comment"
                   placeholder=" "
-                  required
                 />
-                <label class="reg-form__label" for="reg-name"
-                  >Имя&#x0002A;</label
-                >
+                <label class="reg-form__label" for="comment">Сообщение</label>
               </div>
-              <div class="reg-form__field">
-                <input
-                  class="reg-form__input reg-form__tel"
-                  type="tel"
-                  name="tel"
-                  id="reg-tel"
-                  placeholder=" "
-                  required
-                />
-                <label class="reg-form__label" for="reg-tel"
-                  >Телефон&#x0002A;</label
-                >
+              <button class="reg-button reg-form__button" type="submit">
+                Отправить
+              </button>
+            </form>
+          </div>
+        </section>
+        <section class="contacts" id="contacts">
+          <div class="container contacts__container">
+            <h2
+              class="section-title section-title--bright contacts__section-title"
+            >
+              Контакты
+            </h2>
+            <div class="contacts__wrapper">
+              <address class="contacts__address">
+                <ul class="contacts__list">
+                  <li class="contacts__item">
+                    <a class="contacts__link contacts__map" href=""
+                      ><svg class="contacts__icon">
+                        <use href="./images/icons.svg#icon-map-pin"></use>
+                      </svg>
+                      ул. Васильковая, 7А Киев, 08132</a
+                    >
+                  </li>
+                  <li class="contacts__item">
+                    <a
+                      class="contacts__link contacts__tel"
+                      href="tel:+380441111111"
+                    >
+                      <svg class="contacts__icon">
+                        <use href="./images/icons.svg#icon-phone"></use>
+                      </svg>
+                      +38 044 111 11 11</a
+                    >
+                  </li>
+                  <li class="contacts__item">
+                    <a
+                      class="contacts__link contacts__mail"
+                      href="mailto:barbershop@email.com"
+                      ><svg class="contacts__icon">
+                        <use href="./images/icons.svg#icon-mail"></use>
+                      </svg>
+                      barbershop@email.com</a
+                    >
+                  </li>
+                </ul>
+              </address>
+              <div class="contacts__time">
+                <p class="section-description section-description--bright">
+                  время работы
+                </p>
+                <p class="contacts__text">Ежедневно с 9:00 до 22:00</p>
               </div>
-            </div>
-            <div class="reg-form__field reg-form__comment">
-              <input
-                class="reg-form__input"
-                type="text"
-                name="comment"
-                id="comment"
-                placeholder=" "
-              />
-              <label class="reg-form__label" for="comment">Сообщение</label>
-            </div>
-            <button class="reg-button reg-form__button" type="submit">
-              Отправить
-            </button>
-          </form>
-        </div>
-      </section>
-      <section class="contacts" id="contacts">
-        <div class="container contacts__container">
-          <h2
-            class="section-title section-title--bright contacts__section-title"
-          >
-            Контакты
-          </h2>
-          <div class="contacts__wrapper">
-            <address class="contacts__address">
-              <ul class="contacts__list">
-                <li class="contacts__item">
-                  <a class="contacts__link contacts__map" href=""
-                    ><svg class="contacts__icon">
-                      <use href="./images/icons.svg#icon-map-pin"></use>
-                    </svg>
-                    ул. Васильковая, 7А Киев, 08132</a
-                  >
-                </li>
-                <li class="contacts__item">
-                  <a
-                    class="contacts__link contacts__tel"
-                    href="tel:+380441111111"
-                  >
-                    <svg class="contacts__icon">
-                      <use href="./images/icons.svg#icon-phone"></use>
-                    </svg>
-                    +38 044 111 11 11</a
-                  >
-                </li>
-                <li class="contacts__item">
-                  <a
-                    class="contacts__link contacts__mail"
-                    href="mailto:barbershop@email.com"
-                    ><svg class="contacts__icon">
-                      <use href="./images/icons.svg#icon-mail"></use>
-                    </svg>
-                    barbershop@email.com</a
-                  >
-                </li>
-              </ul>
-            </address>
-            <div class="contacts__time">
-              <p class="section-description section-description--bright">
-                время работы
-              </p>
-              <p class="contacts__text">Ежедневно с 9:00 до 22:00</p>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
     <footer class="footer">
       <div class="container footer__container">
