@@ -26,6 +26,18 @@
     transform: translate(-50%, -50%) scale(1);
   }
 
+  @media screen and (min-width: 1200px) {
+    min-width: 500px;
+  }
+
+  .backdrop--is-hidden & {
+    transform: scale(0.9);
+
+    @media screen and (min-width: 768px) {
+      transform: translate(-50%, -50%) scale(0.9);
+    }
+  }
+
   &__text {
     font-weight: 700;
     font-size: 20px;

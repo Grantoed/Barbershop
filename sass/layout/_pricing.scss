@@ -40,18 +40,18 @@
 
   @media screen and (min-width: 1200px) {
     background-image: url(../images/pricing-desk.jpg);
-  }
 
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url(../images/pricing-desk@2x.jpg);
-  }
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/pricing-desk@2x.jpg);
+    }
 
-  @media (min-device-pixel-ratio: 3),
-    (min-resolution: 288dpi),
-    (min-resolution: 3dppx) {
-    background-image: url(../images/pricing-desk@3x.jpg);
+    @media (min-device-pixel-ratio: 3),
+      (min-resolution: 288dpi),
+      (min-resolution: 3dppx) {
+      background-image: url(../images/pricing-desk@3x.jpg);
+    }
   }
 }
 
@@ -70,11 +70,6 @@
 }
 
 .pricing__list {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
-
   font-weight: 400;
   font-size: 14px;
   line-height: 2.14;
@@ -85,14 +80,22 @@
   }
   @media screen and (min-width: 1200px) {
     width: 50%;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-left: 30px;
-    padding-right: 30px;
+
+    font-size: 18px;
+    line-height: 1.67;
+    /* identical to box height, or 167% */
   }
 
   &--light {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+
     @media screen and (min-width: 1200px) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      padding-left: 30px;
+      padding-right: 30px;
       background: linear-gradient(
         180deg,
         #171a24 0%,
@@ -102,7 +105,15 @@
   }
 
   &--dark {
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+
     @media screen and (min-width: 1200px) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      padding-left: 30px;
+      padding-right: 30px;
       background: linear-gradient(
         180deg,
         #090b13 0%,
@@ -116,7 +127,10 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 20px;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
 
   &::after {
     content: "";
@@ -125,6 +139,12 @@
     height: 1px;
     background-color: rgba(157, 164, 189, 0.12);
     flex-grow: 1;
+  }
+}
+
+.pricing__list--light > .pricing__item:last-child {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
   }
 }
 
